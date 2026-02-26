@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Helper</title>
+</head>
+<body
+<div class="container">
+        <header>
+            <h1>Study Helper</h1>
+            <p class="tagline">Manage everything in one place</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('assignments')">Assignments</button>
+            <button class="tab-btn" onclick="switchTab('exams')">Exams</button>
+            <button class="tab-btn" onclick="switchTab('notes')">Notes</button>
+        </div>
+
+        <div class="content">
+            <!-- Assignments Tab -->
+            <div id="assignments" class="tab-content active">
+                <h2 style="margin-bottom: 20px;">My Assignments</h2>
+                <div class="input-group">
+                    <label>Assignment Name</label>
+                    <input type="text" id="assignmentName" placeholder="e.g., Math Homework Ch. 5">
+                </div>
+                <div class="input-group">
+                    <label>Due Date</label>
+                    <input type="date" id="assignmentDate">
+                </div>
+                <div class="input-group">
+                    <label>Subject</label>
+                    <input type="text" id="assignmentSubject" placeholder="e.g., Mathematics">
+                </div>
+                <button onclick="addAssignment()">Add Assignment</button>
+                <div id="assignmentsList" style="margin-top: 30px;"></div>
+            </div>
+
+            <!-- Exams Tab -->
+            <div id="exams" class="tab-content">
+                <h2 style="margin-bottom: 20px;">Upcoming Exams</h2>
+                <div class="input-group">
+                    <label>Exam Name</label>
+                    <input type="text" id="examName" placeholder="e.g., Physics Midterm">
+                </div>
+                <div class="input-group">
+                    <label>Exam Date</label>
+                    <input type="date" id="examDate">
+                </div>
+                <div class="input-group">
+                    <label>Subject</label>
+                    <input type="text" id="examSubject" placeholder="e.g., Physics">
+                </div>
+                <button onclick="addExam()">Add Exam</button>
+                <div id="examsList" style="margin-top: 30px;"></div>
+            </div>
+
+            <!-- Notes Tab -->
+            <div id="notes" class="tab-content">
+                <h2 style="margin-bottom: 20px;">Study Notes</h2>
+                <div class="input-group">
+                    <label>Note Title</label>
+                    <input type="text" id="noteTitle" placeholder="e.g., Chemistry Formulas">
+                </div>
+                <div class="input-group">
+                    <label>Subject</label>
+                    <input type="text" id="noteSubject" placeholder="e.g., Chemistry">
+                </div>
+                <div class="input-group">
+                    <label>Note Content</label>
+                    <textarea id="noteContent" placeholder="Write your notes here..."></textarea>
+                </div>
+                <button onclick="addNote()">Save Note</button>
+                <div id="notesList" style="margin-top: 30px;"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
